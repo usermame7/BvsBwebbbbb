@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulls vs Bears Bot</title>
+  <link rel="stylesheet" href="styles/globals.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bulls vs Bears Bot</h1>
+      <p class="sub">Binary Options DApp (Telegram View)</p>
+    </header>
+
+    <section class="chart-section">
+      <canvas id="priceChart" height="220"></canvas>
+    </section>
+
+    <section class="trade-panel">
+      <div class="timer-select">
+        <label>Select Duration:</label>
+        <select>
+          <option>5s</option>
+          <option>10s</option>
+          <option>15s</option>
+          <option>30s</option>
+          <option>1m</option>
+          <option>2m</option>
+          <option>5m</option>
+        </select>
+      </div>
+
+      <div class="amount-buttons">
+        <button>$5</button><button>$10</button><button>$15</button>
+        <button>$30</button><button>$50</button><button>$75</button><button>$100</button>
+      </div>
+
+      <div class="trade-buttons">
+        <button class="up">UP</button>
+        <button class="down">DOWN</button>
+      </div>
+
+      <div id="expectedPayout" class="payout">Expected Payout: $0</div>
+    </section>
+
+    <footer>
+      <p>Powered by ETH Price. Manual override available.</p>
+    </footer>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('priceChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: Array(30).fill(''),
+        datasets: [{
+          label: 'ETH/USDT',
+          data: Array(30).fill().map(() => 1800 + Math.random() * 100),
+          borderColor: '#ffd700',
+          backgroundColor: 'transparent',
+          tension: 0.2
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: { x: { display: false }, y: { beginAtZero: false } }
+      }
+    });
+  </script>
+</body>
+</html>
