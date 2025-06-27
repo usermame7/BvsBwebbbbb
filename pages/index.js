@@ -1,6 +1,6 @@
 
 import Head from 'next/head'
-import styles from '../styles/globals.css'
+import '../styles/globals.css'
 
 export default function Home() {
   return (
@@ -8,10 +8,12 @@ export default function Home() {
       <Head>
         <title>BvsB Telegram DApp</title>
       </Head>
-      <main>
-        <h1 className="title">Welcome to BvsB Telegram DApp</h1>
-        <p className="description">Telegram interface for binary options</p>
-      </main>
+      <div className="title">BvsB Telegram Bot</div>
+      <div className="chart">[Candlestick Chart Placeholder]</div>
+      <div className="button-row">
+        <button className="up">UP</button>
+        <button className="down">DOWN</button>
+      </div>
     </div>
   )
 }
