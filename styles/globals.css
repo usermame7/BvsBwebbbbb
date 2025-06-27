@@ -1,36 +1,47 @@
-
-:root {
-  --primary-color: #00ff95;
-  --secondary-color: #ff4d4d;
-  --bg-dark: #0a0a0a;
-  --text-light: #ffffff;
-  --button-radius: 12px;
-  --transition-speed: 0.3s;
-}
-
 body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: white;
   margin: 0;
   padding: 0;
-  background-color: var(--bg-dark);
-  font-family: 'Arial', sans-serif;
-  color: var(--text-light);
 }
-
-button {
-  border: none;
-  border-radius: var(--button-radius);
+.container {
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.sub {
+  font-size: 14px;
+  color: #ccc;
+}
+.trade-panel {
+  margin-top: 20px;
+}
+.trade-buttons button,
+.amount-buttons button {
+  margin: 5px;
   padding: 10px 20px;
-  transition: all var(--transition-speed) ease-in-out;
   font-size: 16px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
-
-button.up {
-  background-color: var(--primary-color);
-  color: black;
+.trade-buttons .up {
+  background-color: green;
+  color: white;
 }
-
-button.down {
-  background-color: var(--secondary-color);
+.trade-buttons .down {
+  background-color: red;
+  color: white;
+}
+.payout {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffd700;
+}
   color: white;
 }
