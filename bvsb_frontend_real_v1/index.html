@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bulls vs Bears - Trade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Bulls vs Bears</h1>
+    <div id="chart-container">
+      <iframe src="https://s.tradingview.com/widgetembed/?symbol=ETHUSDT&interval=1&theme=dark" width="100%" height="300"></iframe>
+    </div>
+    <div id="timer-selector">
+      <label>Select Duration:</label>
+      <select id="timer">
+        <option>5s</option><option>10s</option><option>15s</option>
+        <option>30s</option><option>1m</option><option>2m</option><option>5m</option>
+      </select>
+    </div>
+    <div id="amount-selector">
+      <label>Bet Amount:</label>
+      <button>$5</button><button>$10</button><button>$15</button>
+      <button>$30</button><button>$50</button><button>$75</button><button>$100</button>
+    </div>
+    <div id="bet-buttons">
+      <button id="up">📈 UP</button>
+      <button id="down">📉 DOWN</button>
+    </div>
+    <div id="payout-display">Expected Payout: $0.00</div>
+    <div id="active-trades">Your Active Trades Will Show Here</div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+{
+  "users": {
+    "address": "string",
+    "balance": "number"
+  },
+  "trades": {
+    "id": "number",
+    "player": "string",
+    "amount": "number",
+    "direction": "bool",
+    "duration": "number",
+    "createdAt": "timestamp"
+  }
+}
